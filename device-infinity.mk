@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay-infinity
 
 # ANGLE - Almost Native Graphics Layer Engine
 PRODUCT_PACKAGES += \
@@ -18,9 +18,25 @@ PRODUCT_COPY_FILES += \
 # IWLAN
 PRODUCT_PACKAGES += \
     Iwlan
+    
+# Always use scudo for memory allocator
+PRODUCT_USE_SCUDO := true
+
+# PixelParts <Evolution-X>
+include packages/apps/PixelParts/device.mk
 
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
+
+# ViPER4AndroidFX
+# $(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
+
+# Googles Face Unlock
+include vendor/google/faceunlock/device.mk
+# Required packages for Googles Face Unlock
+PRODUCT_PACKAGES += \
+   SettingsGoogleFutureFaceEnroll \
+   PixelTrafficLightFaceOverlay
 
 # wireless_charger HAL service
 include device/google/gs-common/wireless_charger/wireless_charger.mk

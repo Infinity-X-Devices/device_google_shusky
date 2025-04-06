@@ -1,0 +1,6 @@
+# Configuration for Pixel 8
+ro.infinity.soc=Google Tensor G3
+ro.infinity.battery=4575mAh
+ro.infinity.display=2400x1080, 120Hz
+ro.infinity.camera=50MP+12MP+10MP
+ro.product.marketname=Pixel 8
