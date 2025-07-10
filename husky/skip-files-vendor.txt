@@ -812,7 +812,7 @@ overlay/UwbOverlayHK3/UwbOverlayHK3Gsi.apk
 lib/modules
 
 # Exclude files that compile with BUILD_WITHOUT_VENDOR := false
-# or manually added as build targets in device-lineage.mk
+# or manually added as build targets in device-infinity.mk
 
 # AIDL audio
 etc/aidl/hfp/hfp_codec_capabilities.xml

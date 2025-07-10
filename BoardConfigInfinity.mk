@@ -1,8 +1,11 @@
 #
-# SPDX-FileCopyrightText: 2021-2024 The LineageOS Project
-# SPDX-FileCopyrightText: 2021-2024 The Calyx Institute
+# SPDX-FileCopyrightText: 2021-2025 The LineageOS Project
+# SPDX-FileCopyrightText: 2021-2025 The Calyx Institute
 # SPDX-License-Identifier: Apache-2.0
 #
+
+# Disable Artifact Requirements
+DISABLE_ARTIFACT_PATH_REQUIREMENTS := true
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/modules.blocklist.vendor_kernel_boot
