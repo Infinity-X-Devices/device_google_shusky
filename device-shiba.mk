@@ -25,10 +25,11 @@ RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/$(RELEASE_GOOGLE_BOOTLOADER_
 $(call soong_config_set,shusky_bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOADER_SHIBA_DIR))
 
 
-TARGET_LINUX_KERNEL_VERSION := $(RELEASE_KERNEL_SHIBA_VERSION)
-# Keeps flexibility for kasan and ufs builds
-TARGET_KERNEL_DIR ?= $(RELEASE_KERNEL_SHIBA_DIR)
-TARGET_BOARD_KERNEL_HEADERS ?= $(RELEASE_KERNEL_SHIBA_DIR)/kernel-headers
+#RELEASE_KERNEL_HUSKY_DIR := pixel_kernel
+TARGET_KERNEL_DIR := pixel_kernel/shusky
+TARGET_BOARD_KERNEL_HEADERS := pixel_kernel/shusky/kernel-headers
+TARGET_PREBUILT_KERNEL := pixel_kernel/shusky/Image.lz4
+LOCAL_KERNEL := $(TARGET_KERNEL_DIR)/Image.lz4
 
 LOCAL_PATH := device/google/shusky
 
