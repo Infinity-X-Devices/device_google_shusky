@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-TARGET_LINUX_KERNEL_VERSION := 5.15
+TARGET_LINUX_KERNEL_VERSION := 6.1
 
 USE_SWIFTSHADER := true
 BOARD_USES_SWIFTSHADER := true

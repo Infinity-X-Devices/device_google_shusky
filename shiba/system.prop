@@ -1,6 +1,10 @@
-# Configuration for Pixel 8
+## Google Pixel 8 {Shiba}
+
+ro.infinity.maintainer=Libra420T
+
+# Shiba Configurations
 ro.product.marketname=Google Pixel 8
-ro.infinity.soc=Tensor G3
-ro.infinity.display=6.2" Actua OLED 1080 x 2400 20:9, 120Hz
+ro.infinity.soc=Tensor G3 | Titan M2
+ro.infinity.display=6.2" Actua OLED 1080 x 2400, 120Hz
 ro.infinity.battery=4575mAh   27w | 18w
 ro.infinity.camera=50MP+12MP+10MP
