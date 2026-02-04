@@ -1,0 +1,10 @@
+[
+  {
+    "repository": "device_google_zuma",
+    "target_path": "device/google/zuma"
+  },
+  {
+    "repository": "device_google_shusky-kernels",
+    "target_path": "device/google/shusky-kernels/6.1"
+  }
+]

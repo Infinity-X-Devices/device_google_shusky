@@ -5,20 +5,24 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# GMS/GAPPS
+WITH_GMS := true
+WITH_GAPPS := true
+
+# Pixel Kernel
 TARGET_LINUX_KERNEL_VERSION := 6.1
 TARGET_KERNEL_DEVICE := shusky
-TARGET_KERNEL_DIR := device/google/$(TARGET_KERNEL_DEVICE)-kernels/$(TARGET_LINUX_KERNEL_VERSION)
-TARGET_KERNEL_PLATFORM_SOURCE := google/gs-$(TARGET_LINUX_KERNEL_VERSION)
+TARGET_KERNEL_PATH := device/google
+TARGET_KERNEL_DIR := $(TARGET_KERNEL_PATH)/shusky-kernels/6.1
+TARGET_BOARD_KERNEL_HEADERS := $(TARGET_KERNEL_PATH)/shusky-kernels/6.1/kernel-headers
+TARGET_PREBUILT_KERNEL := $(TARGET_KERNEL_PATH)/shusky-kernels/6.1/Image.lz4
+LOCAL_KERNEL := $(TARGET_KERNEL_DIR)/Image.lz4
 
 LOCAL_PATH := device/google/shusky
 
-ifneq ($(TARGET_BOOTS_16K),true)
-PRODUCT_16K_DEVELOPER_OPTION := true
-endif
-
 DEVICE_PACKAGE_OVERLAYS += device/google/shusky/husky/overlay
-DEVICE_PACKAGE_OVERLAYS += device/google/shusky/husky/overlay-lineage
-DEVICE_PACKAGE_OVERLAYS += device/google/shusky/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += device/google/shusky/husky/overlay-infinity
+DEVICE_PACKAGE_OVERLAYS += device/google/shusky/overlay-infinity
 
 # Audio
 PRODUCT_COPY_FILES += \

@@ -1,0 +1,8 @@
+## Google Pixel 8 Pro {Husky}
+
+# Husky Configurations
+ro.product.marketname=Google Pixel 8 Pro
+ro.infinity.soc=Tensor G3 | Titan M2
+ro.infinity.display=6.7" Super-Actua OLED 2992 x 1344, 120Hz
+ro.infinity.battery=5050mAh   30w | 23w
+ro.infinity.camera=50MP+48MP+48MP+10MP
